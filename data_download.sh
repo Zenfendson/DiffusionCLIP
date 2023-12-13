@@ -17,11 +17,11 @@ BASE_DIR=$2
         echo "Unknown DATASET"
         exit 1
     fi
-    mkdir -p $DATASET_FOLDER
+    # mkdir -p $DATASET_FOLDER
     
-    wget --no-check-certificate -r $URL -O $ZIP_FILE
+    # wget --no-check-certificate -r $URL -O $ZIP_FILE
     
-    wget --load-cookies ~/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/cookies.txt --keep-session-cookies --no-check-certificate $URL -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1R72NB79CX0MpnmWSli2SMu-Wp-M0xI-o" -O $ZIP_FILE && rm -rf ~/cookies.txt
+    # wget --load-cookies ~/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/cookies.txt --keep-session-cookies --no-check-certificate $URL -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1R72NB79CX0MpnmWSli2SMu-Wp-M0xI-o" -O $ZIP_FILE && rm -rf ~/cookies.txt
     unzip $ZIP_FILE -d $DATASET_FOLDER
     rm $ZIP_FILE
 
@@ -34,5 +34,5 @@ BASE_DIR=$2
 
 
 
-wget --load-cookies ~/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1R72NB79CX0MpnmWSli2SMu-Wp-M0xI-o' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1R72NB79CX0MpnmWSli2SMu-Wp-M0xI-o" -O a.zip && rm -rf ~/cookies.txt
+# wget --load-cookies ~/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies ~/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1R72NB79CX0MpnmWSli2SMu-Wp-M0xI-o' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1R72NB79CX0MpnmWSli2SMu-Wp-M0xI-o" -O a.zip && rm -rf ~/cookies.txt
 
