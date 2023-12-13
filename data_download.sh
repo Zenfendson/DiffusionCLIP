@@ -17,7 +17,7 @@ BASE_DIR=$2
         echo "Unknown DATASET"
         exit 1
     fi
-    # mkdir -p $DATASET_FOLDER
+    mkdir -p $DATASET_FOLDER
     
     # wget --no-check-certificate -r $URL -O $ZIP_FILE
     
